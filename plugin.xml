@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.informatica.kanban_gantt.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="com.informatica.kanban_gantt.Perspective"
+            id="kanban_gantt.informatica.com.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="View"
+            class="com.informatica.kanban_gantt.View"
+            id="kanban_gantt.informatica.com.view">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               standalone="true"
+               minimized="false"
+               relative="org.eclipse.ui.editorss"
+               relationship="left"
+               id="kanban_gantt.informatica.com.view">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit">
+            </command>
+            <command
+                  commandId="com.informatica.kanban_gantt.command.load_history_export_file"
+                  label="Load History Export File...">
+            </command>
+            <command
+                  commandId="com.informatica.kanban_gantt.command.load_board_export_file"
+                  label="Load Board Export File...">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.informatica.kanban_gantt.handlers.LoadBoardExportFileHandler"
+            id="com.informatica.kanban_gantt.command.load_board_export_file"
+            name="load_board_export_file">
+      </command>
+      <command
+            defaultHandler="com.informatica.kanban_gantt.handlers.LoadHistoryExportFileHandler"
+            id="com.informatica.kanban_gantt.command.load_history_export_file"
+            name="load_history_export_file">
+      </command>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.informatica.kanban_gantt.application"
+            name="Display Test">
+         <property
+               name="appName"
+               value="Display Test">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

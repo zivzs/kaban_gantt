@@ -1,0 +1,9 @@
+<Card id="23424" type="MMF" title="create dashboard" finalCardSize="4">
+	<LanesLog>
+		<Lane id="2312" name="dev:wip" start_date="22/3/2012" start_time="10:30:02" end_date="25/3/2012" end_time="13:30:02">
+		<Lane id="sdfs" name="dev:done" .....>
+		.
+		.
+		.
+	</LanesLog>
+</Card>

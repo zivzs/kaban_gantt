@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Kanban Gantt
+Bundle-SymbolicName: com.informatica.kanban_gantt;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.informatica.kanban_gantt.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.nebula.widgets.ganttchart;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
